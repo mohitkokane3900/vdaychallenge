@@ -1,153 +1,178 @@
 :root {
-  --pink: #ffafcc;
-  --red: #ff4d6d;
-  --purple: #c77dff;
-  --brown: #7b3f00;
-  --cream: #fffaf0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: var(--cream);
-  color: var(--brown);
-}
-
-header {
-  background-color: var(--pink);
-  padding: 1rem;
-  text-align: center;
-}
-
-nav {
-  margin-top: 0.5rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--brown);
-  margin: 0 10px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--red);
-}
-
-section {
-  padding: 2rem;
-  display: none;
-  text-align: center;
-}
-
-section:target {
-  display: block;
-}
-
-section:first-of-type {
-  display: block;
-}
-
-a {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--red);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-a:hover {
-  background-color: var(--purple);
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: var(--pink);
-}
-
-.beach-scene {
-  position: relative;
-  height: 400px;
-  margin-top: 2rem;
-  overflow: hidden;
-}
-
-.sky {
-  background: linear-gradient(to bottom, var(--pink), var(--purple));
-  height: 60%;
-  position: relative;
-}
-
-.sun {
-  width: 80px;
-  height: 80px;
-  background-color: var(--red);
-  border-radius: 50%;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.ocean {
-  background-color: var(--purple);
-  height: 25%;
-  position: relative;
-}
-
-.sand {
-  background-color: var(--cream);
-  height: 15%;
-  position: relative;
-}
-
-.boat {
-  position: absolute;
-  bottom: 10px;
-  left: 10%;
-}
-
-.couple {
-  position: absolute;
-  bottom: 10px;
-  left: 40%;
-}
-
-.crab {
-  position: absolute;
-  bottom: 5px;
-  right: 20%;
-}
-
-.seagull {
-  position: absolute;
-  top: 40px;
-  left: 10%;
-}
-
-@keyframes boat-move {
-  0% { left: -50px; }
-  100% { left: 100%; }
-}
-
-.boat {
-  animation: boat-move 20s linear infinite;
-}
-
-@keyframes wave-move {
-  0% { background-position: 0 0; }
-  100% { background-position: 100px 0; }
-}
-
-.ocean {
-  background-image: linear-gradient(90deg, var(--purple), var(--pink));
-  background-size: 200px 100%;
-  animation: wave-move 8s linear infinite;
-}
+    --pink: #ffafcc;
+    --red: #ff4d6d;
+    --purple: #c77dff;
+    --brown: #7b3f00;
+    --cream: #fffaf0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--brown);
+  }
+  
+  header {
+    background-color: var(--pink);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav {
+    margin-top: 0.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--brown);
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: var(--red);
+  }
+  
+  section {
+    padding: 2rem;
+    display: none;
+    text-align: center;
+  }
+  
+  section:target {
+    display: block;
+  }
+  
+  section:first-of-type {
+    display: block;
+  }
+  
+  a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--red);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  a:hover {
+    background-color: var(--purple);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--pink);
+  }
+  
+  .beach-scene {
+    position: relative;
+    height: 400px;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+  
+  .sky {
+    background: linear-gradient(to bottom, var(--pink), var(--purple));
+    height: 60%;
+    position: relative;
+  }
+  
+  .sun {
+    width: 80px;
+    height: 80px;
+    background-color: var(--red);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .ocean {
+    background-image: linear-gradient(90deg, var(--purple), var(--pink));
+    background-size: 200px 100%;
+    height: 25%;
+    position: relative;
+    animation: wave-move 8s linear infinite;
+  }
+  
+  .sand {
+    background-color: var(--cream);
+    height: 15%;
+    position: relative;
+  }
+  
+  .boat {
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    animation: boat-move 20s linear infinite;
+  }
+  
+  .couple {
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+  }
+  
+  .crab {
+    position: absolute;
+    bottom: 5px;
+    right: 20%;
+    animation: crab-walk 6s ease-in-out infinite;
+  }
+  
+  .seagull {
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    animation: bird-fly 15s linear infinite;
+  }
+  
+  .floating-hearts {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    animation: heart-rise 6s ease-in infinite;
+  }
+  
+  @keyframes boat-move {
+    0% { left: -50px; }
+    100% { left: 100%; }
+  }
+  
+  @keyframes wave-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 0; }
+  }
+  
+  @keyframes bird-fly {
+    0% { left: 0%; }
+    100% { left: 100%; }
+  }
+  
+  @keyframes crab-walk {
+    0% { right: 20%; }
+    50% { right: 25%; }
+    100% { right: 20%; }
+  }
+  
+  @keyframes heart-rise {
+    0% {
+      bottom: 20px;
+      opacity: 1;
+    }
+    100% {
+      bottom: 200px;
+      opacity: 0;
+    }
+  }
+  
