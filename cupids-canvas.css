@@ -1,74 +1,133 @@
 :root {
-    --pink: #ffafcc;
-    --red: #ff4d6d;
-    --purple: #c77dff;
-    --brown: #7b3f00;
-    --cream: #fffaf0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--cream);
-    color: var(--brown);
-  }
-  
-  header {
-    background-color: var(--pink);
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  nav {
-    margin-top: 0.5rem;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: var(--brown);
-    margin: 0 10px;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: var(--red);
-  }
-  
-  section {
-    padding: 2rem;
-    display: none;
-    text-align: center;
-  }
-  
-  section:target {
-    display: block;
-  }
-  
-  section:first-of-type {
-    display: block;
-  }
-  
-  a {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--red);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  a:hover {
-    background-color: var(--purple);
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--pink);
-  }
-  
+  --pink: #ffafcc;
+  --red: #ff4d6d;
+  --purple: #c77dff;
+  --brown: #7b3f00;
+  --cream: #fffaf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--cream);
+  color: var(--brown);
+}
+
+header {
+  background-color: var(--pink);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--brown);
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+section {
+  padding: 2rem;
+  display: none;
+  text-align: center;
+}
+
+section:target {
+  display: block;
+}
+
+section:first-of-type {
+  display: block;
+}
+
+a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: var(--purple);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--pink);
+}
+
+.beach-scene {
+  position: relative;
+  height: 400px;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.sky {
+  background: linear-gradient(to bottom, var(--pink), var(--purple));
+  height: 60%;
+  position: relative;
+}
+
+.sun {
+  width: 80px;
+  height: 80px;
+  background-color: var(--red);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ocean {
+  background-color: var(--purple);
+  height: 25%;
+  position: relative;
+}
+
+.sand {
+  background-color: var(--cream);
+  height: 15%;
+  position: relative;
+}
+
+.boat {
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+}
+
+.couple {
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+}
+
+.crab {
+  position: absolute;
+  bottom: 5px;
+  right: 20%;
+}
+
+.seagull {
+  position: absolute;
+  top: 40px;
+  left: 10%;
+}
