@@ -131,3 +131,23 @@ footer {
   top: 40px;
   left: 10%;
 }
+
+@keyframes boat-move {
+  0% { left: -50px; }
+  100% { left: 100%; }
+}
+
+.boat {
+  animation: boat-move 20s linear infinite;
+}
+
+@keyframes wave-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 0; }
+}
+
+.ocean {
+  background-image: linear-gradient(90deg, var(--purple), var(--pink));
+  background-size: 200px 100%;
+  animation: wave-move 8s linear infinite;
+}
